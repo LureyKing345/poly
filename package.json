@@ -1,0 +1,31 @@
+{
+  "name": "polymarket-autotrader",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Polymarket AutoTrader — dark trading-terminal dashboard with optional demo backend + Telegram bot",
+  "scripts": {
+    "dev": "vite",
+    "dev:client": "vite",
+    "dev:server": "node server/index.js",
+    "dev:all": "concurrently -n client,server -c cyan,magenta \"npm:dev:client\" \"npm:dev:server\"",
+    "check:setup": "node scripts/check-setup-status.js",
+    "build": "vite build",
+    "preview": "vite preview --host",
+    "start": "node server/index.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "lucide-react": "^0.453.0",
+    "node-telegram-bot-api": "^0.66.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "concurrently": "^9.0.1",
+    "vite": "^5.4.10"
+  }
+}
